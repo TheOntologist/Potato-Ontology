@@ -1,0 +1,1270 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://owl.cs.manchester.ac.uk/ontology/start-here.owl-merged#"
+     xml:base="http://owl.cs.manchester.ac.uk/ontology/start-here.owl-merged"
+     xmlns:cropping-time="http://owl.cs.manchester.ac.uk/ontology/cropping-time.owl#"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:yield="http://owl.cs.manchester.ac.uk/ontology/yield.owl#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:potato="http://owl.cs.manchester.ac.uk/ontology/potato.owl#"
+     xmlns:properties="http://owl.cs.manchester.ac.uk/ontology/properties.owl#">
+    <owl:Ontology rdf:about="http://owl.cs.manchester.ac.uk/ontology/potato.owl">
+        <rdfs:label>The potato ontology</rdfs:label>
+        <owl:versionInfo>01</owl:versionInfo>
+        <dc:creator>Robert Stevens</dc:creator>
+        <rdfs:comment></rdfs:comment>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Datatypes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://owl.cs.manchester.ac.uk/ontology/potato.owl#hasSize -->
+
+    <owl:ObjectProperty rdf:about="http://owl.cs.manchester.ac.uk/ontology/potato.owl#hasSize">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://owl.cs.manchester.ac.uk/ontology/potato.owl#Potato"/>
+        <rdfs:range rdf:resource="http://owl.cs.manchester.ac.uk/ontology/potato.owl#Size"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://owl.cs.manchester.ac.uk/ontology/potato.owl#hasTexture -->
+
+    <owl:ObjectProperty rdf:about="http://owl.cs.manchester.ac.uk/ontology/potato.owl#hasTexture">
+        <rdfs:domain rdf:resource="http://owl.cs.manchester.ac.uk/ontology/potato.owl#Potato"/>
+        <rdfs:range rdf:resource="http://owl.cs.manchester.ac.uk/ontology/potato.owl#Texture"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://owl.cs.manchester.ac.uk/ontology/properties.owl#hasCroppingTime -->
+
+    <owl:ObjectProperty rdf:about="http://owl.cs.manchester.ac.uk/ontology/properties.owl#hasCroppingTime">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:range rdf:resource="http://owl.cs.manchester.ac.uk/ontology/cropping-time.owl#CroppingTime"/>
+        <rdfs:domain rdf:resource="http://owl.cs.manchester.ac.uk/ontology/potato.owl#Potato"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://owl.cs.manchester.ac.uk/ontology/properties.owl#hasPreferredServingMethod -->
+
+    <owl:ObjectProperty rdf:about="http://owl.cs.manchester.ac.uk/ontology/properties.owl#hasPreferredServingMethod">
+        <rdfs:domain rdf:resource="http://owl.cs.manchester.ac.uk/ontology/potato.owl#Potato"/>
+        <rdfs:range rdf:resource="http://owl.cs.manchester.ac.uk/ontology/properties.owl#ServingMethod"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://owl.cs.manchester.ac.uk/ontology/properties.owl#hasYield -->
+
+    <owl:ObjectProperty rdf:about="http://owl.cs.manchester.ac.uk/ontology/properties.owl#hasYield">
+        <rdfs:domain rdf:resource="http://owl.cs.manchester.ac.uk/ontology/potato.owl#Potato"/>
+        <rdfs:range rdf:resource="http://owl.cs.manchester.ac.uk/ontology/yield.owl#Yield"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://owl.cs.manchester.ac.uk/ontology/cropping-time.owl#CroppingTime -->
+
+    <owl:Class rdf:about="http://owl.cs.manchester.ac.uk/ontology/cropping-time.owl#CroppingTime">
+        <rdfs:label>Cropping time</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://owl.cs.manchester.ac.uk/ontology/cropping-time.owl#EarlyCropping -->
+
+    <owl:Class rdf:about="http://owl.cs.manchester.ac.uk/ontology/cropping-time.owl#EarlyCropping">
+        <rdfs:label>Early cropping</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://owl.cs.manchester.ac.uk/ontology/cropping-time.owl#CroppingTime"/>
+        <owl:disjointWith rdf:resource="http://owl.cs.manchester.ac.uk/ontology/cropping-time.owl#MainCrop"/>
+    </owl:Class>
+    
+
+
+    <!-- http://owl.cs.manchester.ac.uk/ontology/cropping-time.owl#FirstEarlyCropping -->
+
+    <owl:Class rdf:about="http://owl.cs.manchester.ac.uk/ontology/cropping-time.owl#FirstEarlyCropping">
+        <rdfs:label>First early cropping</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://owl.cs.manchester.ac.uk/ontology/cropping-time.owl#EarlyCropping"/>
+    </owl:Class>
+    
+
+
+    <!-- http://owl.cs.manchester.ac.uk/ontology/cropping-time.owl#LateFirstEarlyCropping -->
+
+    <owl:Class rdf:about="http://owl.cs.manchester.ac.uk/ontology/cropping-time.owl#LateFirstEarlyCropping">
+        <rdfs:label>Late first early cropping</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://owl.cs.manchester.ac.uk/ontology/cropping-time.owl#EarlyCropping"/>
+    </owl:Class>
+    
+
+
+    <!-- http://owl.cs.manchester.ac.uk/ontology/cropping-time.owl#MainCrop -->
+
+    <owl:Class rdf:about="http://owl.cs.manchester.ac.uk/ontology/cropping-time.owl#MainCrop">
+        <rdfs:label>Main cropping</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://owl.cs.manchester.ac.uk/ontology/cropping-time.owl#CroppingTime"/>
+    </owl:Class>
+    
+
+
+    <!-- http://owl.cs.manchester.ac.uk/ontology/cropping-time.owl#SecondEarlyCropping -->
+
+    <owl:Class rdf:about="http://owl.cs.manchester.ac.uk/ontology/cropping-time.owl#SecondEarlyCropping">
+        <rdfs:label>Second early cropping</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://owl.cs.manchester.ac.uk/ontology/cropping-time.owl#EarlyCropping"/>
+    </owl:Class>
+    
+
+
+    <!-- http://owl.cs.manchester.ac.uk/ontology/potato.owl#Accent -->
+
+    <owl:Class rdf:about="http://owl.cs.manchester.ac.uk/ontology/potato.owl#Accent">
+        <rdfs:label>Accent</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://owl.cs.manchester.ac.uk/ontology/potato.owl#Potato"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://owl.cs.manchester.ac.uk/ontology/properties.owl#hasCroppingTime"/>
+                <owl:someValuesFrom rdf:resource="http://owl.cs.manchester.ac.uk/ontology/cropping-time.owl#LateFirstEarlyCropping"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://owl.cs.manchester.ac.uk/ontology/properties.owl#hasPreferredServingMethod"/>
+                <owl:someValuesFrom rdf:resource="http://owl.cs.manchester.ac.uk/ontology/properties.owl#Boiled"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://owl.cs.manchester.ac.uk/ontology/potato.owl#hasTexture"/>
+                <owl:someValuesFrom rdf:resource="http://owl.cs.manchester.ac.uk/ontology/potato.owl#Firm"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://owl.cs.manchester.ac.uk/ontology/properties.owl#hasYield"/>
+                <owl:someValuesFrom rdf:resource="http://owl.cs.manchester.ac.uk/ontology/yield.owl#HighYield"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://owl.cs.manchester.ac.uk/ontology/potato.owl#hasTexture"/>
+                <owl:someValuesFrom rdf:resource="http://owl.cs.manchester.ac.uk/ontology/potato.owl#Waxy"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://owl.cs.manchester.ac.uk/ontology/potato.owl#Creamy -->
+
+    <owl:Class rdf:about="http://owl.cs.manchester.ac.uk/ontology/potato.owl#Creamy">
+        <rdfs:label>Creamy</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://owl.cs.manchester.ac.uk/ontology/potato.owl#Texture"/>
+    </owl:Class>
+    
+
+
+    <!-- http://owl.cs.manchester.ac.uk/ontology/potato.owl#Desiree -->
+
+    <owl:Class rdf:about="http://owl.cs.manchester.ac.uk/ontology/potato.owl#Desiree">
+        <rdfs:label>Desiree</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://owl.cs.manchester.ac.uk/ontology/potato.owl#Potato"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://owl.cs.manchester.ac.uk/ontology/properties.owl#hasPreferredServingMethod"/>
+                <owl:someValuesFrom rdf:resource="http://owl.cs.manchester.ac.uk/ontology/properties.owl#Baked"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://owl.cs.manchester.ac.uk/ontology/properties.owl#hasPreferredServingMethod"/>
+                <owl:someValuesFrom rdf:resource="http://owl.cs.manchester.ac.uk/ontology/properties.owl#Mashed"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://owl.cs.manchester.ac.uk/ontology/properties.owl#hasYield"/>
+                <owl:someValuesFrom rdf:resource="http://owl.cs.manchester.ac.uk/ontology/yield.owl#HighYield"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://owl.cs.manchester.ac.uk/ontology/potato.owl#hasTexture"/>
+                <owl:someValuesFrom rdf:resource="http://owl.cs.manchester.ac.uk/ontology/potato.owl#Waxy"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://owl.cs.manchester.ac.uk/ontology/properties.owl#hasCroppingTime"/>
+                <owl:someValuesFrom rdf:resource="http://owl.cs.manchester.ac.uk/ontology/cropping-time.owl#FirstEarlyCropping"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://owl.cs.manchester.ac.uk/ontology/potato.owl#Firm -->
+
+    <owl:Class rdf:about="http://owl.cs.manchester.ac.uk/ontology/potato.owl#Firm">
+        <rdfs:label>Firm</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://owl.cs.manchester.ac.uk/ontology/potato.owl#Texture"/>
+    </owl:Class>
+    
+
+
+    <!-- http://owl.cs.manchester.ac.uk/ontology/potato.owl#GoldenWonder -->
+
+    <owl:Class rdf:about="http://owl.cs.manchester.ac.uk/ontology/potato.owl#GoldenWonder">
+        <rdfs:label>Golden wonder</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://owl.cs.manchester.ac.uk/ontology/potato.owl#Potato"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://owl.cs.manchester.ac.uk/ontology/properties.owl#hasYield"/>
+                <owl:someValuesFrom rdf:resource="http://owl.cs.manchester.ac.uk/ontology/yield.owl#LowYield"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://owl.cs.manchester.ac.uk/ontology/properties.owl#hasPreferredServingMethod"/>
+                <owl:someValuesFrom rdf:resource="http://owl.cs.manchester.ac.uk/ontology/properties.owl#Roasted"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://owl.cs.manchester.ac.uk/ontology/properties.owl#hasCroppingTime"/>
+                <owl:someValuesFrom rdf:resource="http://owl.cs.manchester.ac.uk/ontology/cropping-time.owl#MainCrop"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://owl.cs.manchester.ac.uk/ontology/properties.owl#hasPreferredServingMethod"/>
+                <owl:someValuesFrom rdf:resource="http://owl.cs.manchester.ac.uk/ontology/properties.owl#Chipped"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://owl.cs.manchester.ac.uk/ontology/properties.owl#hasPreferredServingMethod"/>
+                <owl:someValuesFrom rdf:resource="http://owl.cs.manchester.ac.uk/ontology/properties.owl#Baked"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://owl.cs.manchester.ac.uk/ontology/potato.owl#InternationalKidney -->
+
+    <owl:Class rdf:about="http://owl.cs.manchester.ac.uk/ontology/potato.owl#InternationalKidney">
+        <rdfs:label>International kidney</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://owl.cs.manchester.ac.uk/ontology/potato.owl#Potato"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://owl.cs.manchester.ac.uk/ontology/properties.owl#hasYield"/>
+                <owl:someValuesFrom rdf:resource="http://owl.cs.manchester.ac.uk/ontology/yield.owl#MediumYield"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://owl.cs.manchester.ac.uk/ontology/properties.owl#hasCroppingTime"/>
+                <owl:someValuesFrom rdf:resource="http://owl.cs.manchester.ac.uk/ontology/cropping-time.owl#LateFirstEarlyCropping"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://owl.cs.manchester.ac.uk/ontology/properties.owl#hasPreferredServingMethod"/>
+                <owl:someValuesFrom rdf:resource="http://owl.cs.manchester.ac.uk/ontology/properties.owl#Salad"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://owl.cs.manchester.ac.uk/ontology/properties.owl#hasPreferredServingMethod"/>
+                <owl:someValuesFrom rdf:resource="http://owl.cs.manchester.ac.uk/ontology/properties.owl#Boiled"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://owl.cs.manchester.ac.uk/ontology/potato.owl#IrregularSize -->
+
+    <owl:Class rdf:about="http://owl.cs.manchester.ac.uk/ontology/potato.owl#IrregularSize">
+        <rdfs:label>Irregular size</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://owl.cs.manchester.ac.uk/ontology/potato.owl#Size"/>
+    </owl:Class>
+    
+
+
+    <!-- http://owl.cs.manchester.ac.uk/ontology/potato.owl#Juliette -->
+
+    <owl:Class rdf:about="http://owl.cs.manchester.ac.uk/ontology/potato.owl#Juliette">
+        <rdfs:label>Juliette</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://owl.cs.manchester.ac.uk/ontology/potato.owl#Potato"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://owl.cs.manchester.ac.uk/ontology/properties.owl#hasPreferredServingMethod"/>
+                <owl:someValuesFrom rdf:resource="http://owl.cs.manchester.ac.uk/ontology/properties.owl#Boiled"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://owl.cs.manchester.ac.uk/ontology/properties.owl#hasPreferredServingMethod"/>
+                <owl:someValuesFrom rdf:resource="http://owl.cs.manchester.ac.uk/ontology/properties.owl#Salad"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://owl.cs.manchester.ac.uk/ontology/properties.owl#hasYield"/>
+                <owl:someValuesFrom rdf:resource="http://owl.cs.manchester.ac.uk/ontology/yield.owl#MediumYield"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://owl.cs.manchester.ac.uk/ontology/properties.owl#hasCroppingTime"/>
+                <owl:someValuesFrom rdf:resource="http://owl.cs.manchester.ac.uk/ontology/cropping-time.owl#MainCrop"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://owl.cs.manchester.ac.uk/ontology/potato.owl#LargeSize -->
+
+    <owl:Class rdf:about="http://owl.cs.manchester.ac.uk/ontology/potato.owl#LargeSize">
+        <rdfs:label>Large size</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://owl.cs.manchester.ac.uk/ontology/potato.owl#Size"/>
+    </owl:Class>
+    
+
+
+    <!-- http://owl.cs.manchester.ac.uk/ontology/potato.owl#MarisPiper -->
+
+    <owl:Class rdf:about="http://owl.cs.manchester.ac.uk/ontology/potato.owl#MarisPiper">
+        <rdfs:label>Maris Piper</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://owl.cs.manchester.ac.uk/ontology/potato.owl#Potato"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://owl.cs.manchester.ac.uk/ontology/properties.owl#hasYield"/>
+                <owl:someValuesFrom rdf:resource="http://owl.cs.manchester.ac.uk/ontology/yield.owl#VeryHighYield"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://owl.cs.manchester.ac.uk/ontology/properties.owl#hasPreferredServingMethod"/>
+                <owl:someValuesFrom rdf:resource="http://owl.cs.manchester.ac.uk/ontology/properties.owl#Roasted"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://owl.cs.manchester.ac.uk/ontology/potato.owl#hasTexture"/>
+                <owl:someValuesFrom rdf:resource="http://owl.cs.manchester.ac.uk/ontology/potato.owl#Creamy"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://owl.cs.manchester.ac.uk/ontology/properties.owl#hasPreferredServingMethod"/>
+                <owl:someValuesFrom rdf:resource="http://owl.cs.manchester.ac.uk/ontology/properties.owl#Chipped"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://owl.cs.manchester.ac.uk/ontology/properties.owl#hasPreferredServingMethod"/>
+                <owl:someValuesFrom rdf:resource="http://owl.cs.manchester.ac.uk/ontology/properties.owl#Mashed"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://owl.cs.manchester.ac.uk/ontology/properties.owl#hasCroppingTime"/>
+                <owl:someValuesFrom rdf:resource="http://owl.cs.manchester.ac.uk/ontology/cropping-time.owl#MainCrop"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://owl.cs.manchester.ac.uk/ontology/potato.owl#Markies -->
+
+    <owl:Class rdf:about="http://owl.cs.manchester.ac.uk/ontology/potato.owl#Markies">
+        <rdfs:label>Markies</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://owl.cs.manchester.ac.uk/ontology/potato.owl#Potato"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://owl.cs.manchester.ac.uk/ontology/properties.owl#hasYield"/>
+                <owl:someValuesFrom rdf:resource="http://owl.cs.manchester.ac.uk/ontology/yield.owl#HighYield"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://owl.cs.manchester.ac.uk/ontology/properties.owl#hasPreferredServingMethod"/>
+                <owl:someValuesFrom rdf:resource="http://owl.cs.manchester.ac.uk/ontology/properties.owl#Chipped"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://owl.cs.manchester.ac.uk/ontology/properties.owl#hasCroppingTime"/>
+                <owl:someValuesFrom rdf:resource="http://owl.cs.manchester.ac.uk/ontology/cropping-time.owl#SecondEarlyCropping"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://owl.cs.manchester.ac.uk/ontology/properties.owl#hasPreferredServingMethod"/>
+                <owl:someValuesFrom rdf:resource="http://owl.cs.manchester.ac.uk/ontology/properties.owl#Roasted"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://owl.cs.manchester.ac.uk/ontology/properties.owl#hasPreferredServingMethod"/>
+                <owl:someValuesFrom rdf:resource="http://owl.cs.manchester.ac.uk/ontology/properties.owl#Baked"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://owl.cs.manchester.ac.uk/ontology/properties.owl#hasPreferredServingMethod"/>
+                <owl:someValuesFrom rdf:resource="http://owl.cs.manchester.ac.uk/ontology/properties.owl#Boiled"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://owl.cs.manchester.ac.uk/ontology/potato.owl#MediumSize -->
+
+    <owl:Class rdf:about="http://owl.cs.manchester.ac.uk/ontology/potato.owl#MediumSize">
+        <rdfs:label>Medium size</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://owl.cs.manchester.ac.uk/ontology/potato.owl#Size"/>
+    </owl:Class>
+    
+
+
+    <!-- http://owl.cs.manchester.ac.uk/ontology/potato.owl#NewPotato -->
+
+    <owl:Class rdf:about="http://owl.cs.manchester.ac.uk/ontology/potato.owl#NewPotato">
+        <rdfs:label>New potato</rdfs:label>
+        <owl:equivalentClass rdf:resource="http://owl.cs.manchester.ac.uk/ontology/properties.owl#EarlyPotato"/>
+    </owl:Class>
+    
+
+
+    <!-- http://owl.cs.manchester.ac.uk/ontology/potato.owl#PentlandDell -->
+
+    <owl:Class rdf:about="http://owl.cs.manchester.ac.uk/ontology/potato.owl#PentlandDell">
+        <rdfs:label>Pentland Dell</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://owl.cs.manchester.ac.uk/ontology/potato.owl#Potato"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://owl.cs.manchester.ac.uk/ontology/properties.owl#hasCroppingTime"/>
+                <owl:someValuesFrom rdf:resource="http://owl.cs.manchester.ac.uk/ontology/cropping-time.owl#LateFirstEarlyCropping"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://owl.cs.manchester.ac.uk/ontology/properties.owl#hasYield"/>
+                <owl:someValuesFrom rdf:resource="http://owl.cs.manchester.ac.uk/ontology/yield.owl#HighYield"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://owl.cs.manchester.ac.uk/ontology/properties.owl#hasPreferredServingMethod"/>
+                <owl:someValuesFrom rdf:resource="http://owl.cs.manchester.ac.uk/ontology/properties.owl#Chipped"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://owl.cs.manchester.ac.uk/ontology/properties.owl#hasPreferredServingMethod"/>
+                <owl:someValuesFrom rdf:resource="http://owl.cs.manchester.ac.uk/ontology/properties.owl#Roasted"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://owl.cs.manchester.ac.uk/ontology/properties.owl#hasPreferredServingMethod"/>
+                <owl:someValuesFrom rdf:resource="http://owl.cs.manchester.ac.uk/ontology/properties.owl#Mashed"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://owl.cs.manchester.ac.uk/ontology/potato.owl#PinkFirApple -->
+
+    <owl:Class rdf:about="http://owl.cs.manchester.ac.uk/ontology/potato.owl#PinkFirApple">
+        <rdfs:label>Pink Fir Apple</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://owl.cs.manchester.ac.uk/ontology/potato.owl#Potato"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://owl.cs.manchester.ac.uk/ontology/properties.owl#hasYield"/>
+                <owl:someValuesFrom rdf:resource="http://owl.cs.manchester.ac.uk/ontology/yield.owl#LowYield"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://owl.cs.manchester.ac.uk/ontology/properties.owl#hasCroppingTime"/>
+                <owl:someValuesFrom rdf:resource="http://owl.cs.manchester.ac.uk/ontology/cropping-time.owl#FirstEarlyCropping"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://owl.cs.manchester.ac.uk/ontology/properties.owl#hasPreferredServingMethod"/>
+                <owl:someValuesFrom rdf:resource="http://owl.cs.manchester.ac.uk/ontology/properties.owl#Boiled"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://owl.cs.manchester.ac.uk/ontology/properties.owl#hasPreferredServingMethod"/>
+                <owl:someValuesFrom rdf:resource="http://owl.cs.manchester.ac.uk/ontology/properties.owl#Salad"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://owl.cs.manchester.ac.uk/ontology/potato.owl#hasTexture"/>
+                <owl:someValuesFrom rdf:resource="http://owl.cs.manchester.ac.uk/ontology/potato.owl#Waxy"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://owl.cs.manchester.ac.uk/ontology/potato.owl#Potato -->
+
+    <owl:Class rdf:about="http://owl.cs.manchester.ac.uk/ontology/potato.owl#Potato">
+        <rdfs:label>Potato</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://owl.cs.manchester.ac.uk/ontology/potato.owl#Romano -->
+
+    <owl:Class rdf:about="http://owl.cs.manchester.ac.uk/ontology/potato.owl#Romano">
+        <rdfs:label>Romano</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://owl.cs.manchester.ac.uk/ontology/potato.owl#Potato"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://owl.cs.manchester.ac.uk/ontology/potato.owl#hasTexture"/>
+                <owl:someValuesFrom rdf:resource="http://owl.cs.manchester.ac.uk/ontology/potato.owl#Waxy"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://owl.cs.manchester.ac.uk/ontology/properties.owl#hasCroppingTime"/>
+                <owl:someValuesFrom rdf:resource="http://owl.cs.manchester.ac.uk/ontology/cropping-time.owl#MainCrop"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://owl.cs.manchester.ac.uk/ontology/properties.owl#hasPreferredServingMethod"/>
+                <owl:someValuesFrom rdf:resource="http://owl.cs.manchester.ac.uk/ontology/properties.owl#Roasted"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://owl.cs.manchester.ac.uk/ontology/properties.owl#hasPreferredServingMethod"/>
+                <owl:someValuesFrom rdf:resource="http://owl.cs.manchester.ac.uk/ontology/properties.owl#Mashed"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://owl.cs.manchester.ac.uk/ontology/properties.owl#hasPreferredServingMethod"/>
+                <owl:someValuesFrom rdf:resource="http://owl.cs.manchester.ac.uk/ontology/properties.owl#Baked"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://owl.cs.manchester.ac.uk/ontology/properties.owl#hasYield"/>
+                <owl:someValuesFrom rdf:resource="http://owl.cs.manchester.ac.uk/ontology/yield.owl#HighYield"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://owl.cs.manchester.ac.uk/ontology/potato.owl#Rudolf -->
+
+    <owl:Class rdf:about="http://owl.cs.manchester.ac.uk/ontology/potato.owl#Rudolf">
+        <rdfs:label>Rudolf</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://owl.cs.manchester.ac.uk/ontology/potato.owl#Potato"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://owl.cs.manchester.ac.uk/ontology/properties.owl#hasYield"/>
+                <owl:someValuesFrom rdf:resource="http://owl.cs.manchester.ac.uk/ontology/yield.owl#HighYield"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://owl.cs.manchester.ac.uk/ontology/potato.owl#hasTexture"/>
+                <owl:someValuesFrom rdf:resource="http://owl.cs.manchester.ac.uk/ontology/potato.owl#Creamy"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://owl.cs.manchester.ac.uk/ontology/properties.owl#hasPreferredServingMethod"/>
+                <owl:someValuesFrom rdf:resource="http://owl.cs.manchester.ac.uk/ontology/properties.owl#Baked"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://owl.cs.manchester.ac.uk/ontology/properties.owl#hasCroppingTime"/>
+                <owl:someValuesFrom rdf:resource="http://owl.cs.manchester.ac.uk/ontology/cropping-time.owl#FirstEarlyCropping"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://owl.cs.manchester.ac.uk/ontology/properties.owl#hasPreferredServingMethod"/>
+                <owl:someValuesFrom rdf:resource="http://owl.cs.manchester.ac.uk/ontology/properties.owl#Roasted"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://owl.cs.manchester.ac.uk/ontology/potato.owl#Size -->
+
+    <owl:Class rdf:about="http://owl.cs.manchester.ac.uk/ontology/potato.owl#Size">
+        <rdfs:label>Size</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://owl.cs.manchester.ac.uk/ontology/potato.owl#SmallSize -->
+
+    <owl:Class rdf:about="http://owl.cs.manchester.ac.uk/ontology/potato.owl#SmallSize">
+        <rdfs:label>Small size</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://owl.cs.manchester.ac.uk/ontology/potato.owl#Size"/>
+    </owl:Class>
+    
+
+
+    <!-- http://owl.cs.manchester.ac.uk/ontology/potato.owl#Stemstar -->
+
+    <owl:Class rdf:about="http://owl.cs.manchester.ac.uk/ontology/potato.owl#Stemstar">
+        <rdfs:label>Stemster</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://owl.cs.manchester.ac.uk/ontology/potato.owl#Potato"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://owl.cs.manchester.ac.uk/ontology/properties.owl#hasPreferredServingMethod"/>
+                <owl:someValuesFrom rdf:resource="http://owl.cs.manchester.ac.uk/ontology/properties.owl#Mashed"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://owl.cs.manchester.ac.uk/ontology/properties.owl#hasCroppingTime"/>
+                <owl:someValuesFrom rdf:resource="http://owl.cs.manchester.ac.uk/ontology/cropping-time.owl#SecondEarlyCropping"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://owl.cs.manchester.ac.uk/ontology/properties.owl#hasPreferredServingMethod"/>
+                <owl:someValuesFrom rdf:resource="http://owl.cs.manchester.ac.uk/ontology/properties.owl#Boiled"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://owl.cs.manchester.ac.uk/ontology/potato.owl#hasTexture"/>
+                <owl:someValuesFrom rdf:resource="http://owl.cs.manchester.ac.uk/ontology/potato.owl#Creamy"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://owl.cs.manchester.ac.uk/ontology/properties.owl#hasYield"/>
+                <owl:someValuesFrom rdf:resource="http://owl.cs.manchester.ac.uk/ontology/yield.owl#HighYield"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://owl.cs.manchester.ac.uk/ontology/properties.owl#hasPreferredServingMethod"/>
+                <owl:someValuesFrom rdf:resource="http://owl.cs.manchester.ac.uk/ontology/properties.owl#Chipped"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://owl.cs.manchester.ac.uk/ontology/properties.owl#hasPreferredServingMethod"/>
+                <owl:someValuesFrom rdf:resource="http://owl.cs.manchester.ac.uk/ontology/properties.owl#Baked"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://owl.cs.manchester.ac.uk/ontology/properties.owl#hasPreferredServingMethod"/>
+                <owl:someValuesFrom rdf:resource="http://owl.cs.manchester.ac.uk/ontology/properties.owl#Roasted"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://owl.cs.manchester.ac.uk/ontology/potato.owl#Texture -->
+
+    <owl:Class rdf:about="http://owl.cs.manchester.ac.uk/ontology/potato.owl#Texture">
+        <rdfs:label>Texture</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://owl.cs.manchester.ac.uk/ontology/potato.owl#Waxy -->
+
+    <owl:Class rdf:about="http://owl.cs.manchester.ac.uk/ontology/potato.owl#Waxy">
+        <rdfs:label>Waxy</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://owl.cs.manchester.ac.uk/ontology/potato.owl#Texture"/>
+    </owl:Class>
+    
+
+
+    <!-- http://owl.cs.manchester.ac.uk/ontology/potato.owl#Wilja -->
+
+    <owl:Class rdf:about="http://owl.cs.manchester.ac.uk/ontology/potato.owl#Wilja">
+        <rdfs:label>Wilja</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://owl.cs.manchester.ac.uk/ontology/potato.owl#Potato"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://owl.cs.manchester.ac.uk/ontology/properties.owl#hasPreferredServingMethod"/>
+                <owl:someValuesFrom rdf:resource="http://owl.cs.manchester.ac.uk/ontology/properties.owl#Mashed"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://owl.cs.manchester.ac.uk/ontology/properties.owl#hasYield"/>
+                <owl:someValuesFrom rdf:resource="http://owl.cs.manchester.ac.uk/ontology/yield.owl#VeryHighYield"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://owl.cs.manchester.ac.uk/ontology/properties.owl#hasCroppingTime"/>
+                <owl:someValuesFrom rdf:resource="http://owl.cs.manchester.ac.uk/ontology/cropping-time.owl#SecondEarlyCropping"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://owl.cs.manchester.ac.uk/ontology/properties.owl#hasPreferredServingMethod"/>
+                <owl:someValuesFrom rdf:resource="http://owl.cs.manchester.ac.uk/ontology/properties.owl#Boiled"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://owl.cs.manchester.ac.uk/ontology/properties.owl#Baked -->
+
+    <owl:Class rdf:about="http://owl.cs.manchester.ac.uk/ontology/properties.owl#Baked">
+        <rdfs:label>Baked</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://owl.cs.manchester.ac.uk/ontology/properties.owl#ServingMethod"/>
+    </owl:Class>
+    
+
+
+    <!-- http://owl.cs.manchester.ac.uk/ontology/properties.owl#BakingPotato -->
+
+    <owl:Class rdf:about="http://owl.cs.manchester.ac.uk/ontology/properties.owl#BakingPotato">
+        <rdfs:label>Baking potato</rdfs:label>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://owl.cs.manchester.ac.uk/ontology/properties.owl#hasPreferredServingMethod"/>
+                <owl:someValuesFrom rdf:resource="http://owl.cs.manchester.ac.uk/ontology/properties.owl#Baked"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://owl.cs.manchester.ac.uk/ontology/properties.owl#Boiled -->
+
+    <owl:Class rdf:about="http://owl.cs.manchester.ac.uk/ontology/properties.owl#Boiled">
+        <rdfs:label>Boiled</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://owl.cs.manchester.ac.uk/ontology/properties.owl#ServingMethod"/>
+    </owl:Class>
+    
+
+
+    <!-- http://owl.cs.manchester.ac.uk/ontology/properties.owl#BoilingPotato -->
+
+    <owl:Class rdf:about="http://owl.cs.manchester.ac.uk/ontology/properties.owl#BoilingPotato">
+        <rdfs:label>Boiling potato</rdfs:label>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://owl.cs.manchester.ac.uk/ontology/properties.owl#hasPreferredServingMethod"/>
+                <owl:someValuesFrom rdf:resource="http://owl.cs.manchester.ac.uk/ontology/properties.owl#Boiled"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://owl.cs.manchester.ac.uk/ontology/properties.owl#Chipped -->
+
+    <owl:Class rdf:about="http://owl.cs.manchester.ac.uk/ontology/properties.owl#Chipped">
+        <rdfs:label>Chipped</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://owl.cs.manchester.ac.uk/ontology/properties.owl#ServingMethod"/>
+    </owl:Class>
+    
+
+
+    <!-- http://owl.cs.manchester.ac.uk/ontology/properties.owl#ChippingPotato -->
+
+    <owl:Class rdf:about="http://owl.cs.manchester.ac.uk/ontology/properties.owl#ChippingPotato">
+        <rdfs:label>Chipping potato</rdfs:label>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://owl.cs.manchester.ac.uk/ontology/properties.owl#hasPreferredServingMethod"/>
+                <owl:someValuesFrom rdf:resource="http://owl.cs.manchester.ac.uk/ontology/properties.owl#Chipped"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://owl.cs.manchester.ac.uk/ontology/properties.owl#EarlyHighYieldPotato -->
+
+    <owl:Class rdf:about="http://owl.cs.manchester.ac.uk/ontology/properties.owl#EarlyHighYieldPotato">
+        <rdfs:label>Early high yield potato</rdfs:label>
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://owl.cs.manchester.ac.uk/ontology/properties.owl#hasCroppingTime"/>
+                        <owl:someValuesFrom rdf:resource="http://owl.cs.manchester.ac.uk/ontology/cropping-time.owl#EarlyCropping"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://owl.cs.manchester.ac.uk/ontology/properties.owl#hasYield"/>
+                        <owl:someValuesFrom rdf:resource="http://owl.cs.manchester.ac.uk/ontology/yield.owl#HighYield"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://owl.cs.manchester.ac.uk/ontology/properties.owl#EarlyPotato -->
+
+    <owl:Class rdf:about="http://owl.cs.manchester.ac.uk/ontology/properties.owl#EarlyPotato">
+        <rdfs:label>Early potato</rdfs:label>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://owl.cs.manchester.ac.uk/ontology/properties.owl#hasCroppingTime"/>
+                <owl:someValuesFrom rdf:resource="http://owl.cs.manchester.ac.uk/ontology/cropping-time.owl#EarlyCropping"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://owl.cs.manchester.ac.uk/ontology/properties.owl#FirstEarlyLowYieldSaladPotato -->
+
+    <owl:Class rdf:about="http://owl.cs.manchester.ac.uk/ontology/properties.owl#FirstEarlyLowYieldSaladPotato">
+        <rdfs:label>First early low yield salad potato</rdfs:label>
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://owl.cs.manchester.ac.uk/ontology/properties.owl#FirstEarlyPotato"/>
+                    <rdf:Description rdf:about="http://owl.cs.manchester.ac.uk/ontology/properties.owl#SaladPotato"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://owl.cs.manchester.ac.uk/ontology/properties.owl#hasYield"/>
+                        <owl:someValuesFrom rdf:resource="http://owl.cs.manchester.ac.uk/ontology/yield.owl#LowYield"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://owl.cs.manchester.ac.uk/ontology/properties.owl#FirstEarlyPotato -->
+
+    <owl:Class rdf:about="http://owl.cs.manchester.ac.uk/ontology/properties.owl#FirstEarlyPotato">
+        <rdfs:label>First early potato</rdfs:label>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://owl.cs.manchester.ac.uk/ontology/properties.owl#hasCroppingTime"/>
+                <owl:someValuesFrom rdf:resource="http://owl.cs.manchester.ac.uk/ontology/cropping-time.owl#FirstEarlyCropping"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://owl.cs.manchester.ac.uk/ontology/properties.owl#HighYieldEarlyBoilingPotato -->
+
+    <owl:Class rdf:about="http://owl.cs.manchester.ac.uk/ontology/properties.owl#HighYieldEarlyBoilingPotato">
+        <rdfs:label>High yield  early cropping boiling potato</rdfs:label>
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://owl.cs.manchester.ac.uk/ontology/properties.owl#BoilingPotato"/>
+                    <rdf:Description rdf:about="http://owl.cs.manchester.ac.uk/ontology/properties.owl#EarlyPotato"/>
+                    <rdf:Description rdf:about="http://owl.cs.manchester.ac.uk/ontology/properties.owl#HighYieldPotato"/>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://owl.cs.manchester.ac.uk/ontology/properties.owl#HighYieldPotato -->
+
+    <owl:Class rdf:about="http://owl.cs.manchester.ac.uk/ontology/properties.owl#HighYieldPotato">
+        <rdfs:label>High yield potato</rdfs:label>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://owl.cs.manchester.ac.uk/ontology/properties.owl#hasYield"/>
+                <owl:someValuesFrom rdf:resource="http://owl.cs.manchester.ac.uk/ontology/yield.owl#HighYield"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://owl.cs.manchester.ac.uk/ontology/properties.owl#LateFirstEarlyPotato -->
+
+    <owl:Class rdf:about="http://owl.cs.manchester.ac.uk/ontology/properties.owl#LateFirstEarlyPotato">
+        <rdfs:label>Late first early potato</rdfs:label>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://owl.cs.manchester.ac.uk/ontology/properties.owl#hasCroppingTime"/>
+                <owl:someValuesFrom rdf:resource="http://owl.cs.manchester.ac.uk/ontology/cropping-time.owl#LateFirstEarlyCropping"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://owl.cs.manchester.ac.uk/ontology/properties.owl#MainCropChippingPotato -->
+
+    <owl:Class rdf:about="http://owl.cs.manchester.ac.uk/ontology/properties.owl#MainCropChippingPotato">
+        <rdfs:label>Main crop chipping potato</rdfs:label>
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://owl.cs.manchester.ac.uk/ontology/properties.owl#ChippingPotato"/>
+                    <rdf:Description rdf:about="http://owl.cs.manchester.ac.uk/ontology/properties.owl#MainCropPotato"/>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://owl.cs.manchester.ac.uk/ontology/properties.owl#MainCropHighYieldPotato -->
+
+    <owl:Class rdf:about="http://owl.cs.manchester.ac.uk/ontology/properties.owl#MainCropHighYieldPotato">
+        <rdfs:label>Main crop high yield potato</rdfs:label>
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://owl.cs.manchester.ac.uk/ontology/properties.owl#hasCroppingTime"/>
+                        <owl:someValuesFrom rdf:resource="http://owl.cs.manchester.ac.uk/ontology/cropping-time.owl#MainCrop"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://owl.cs.manchester.ac.uk/ontology/properties.owl#hasYield"/>
+                        <owl:someValuesFrom rdf:resource="http://owl.cs.manchester.ac.uk/ontology/yield.owl#HighYield"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://owl.cs.manchester.ac.uk/ontology/properties.owl#MainCropPotato -->
+
+    <owl:Class rdf:about="http://owl.cs.manchester.ac.uk/ontology/properties.owl#MainCropPotato">
+        <rdfs:label>Main crop potato</rdfs:label>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://owl.cs.manchester.ac.uk/ontology/properties.owl#hasCroppingTime"/>
+                <owl:someValuesFrom rdf:resource="http://owl.cs.manchester.ac.uk/ontology/cropping-time.owl#MainCrop"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://owl.cs.manchester.ac.uk/ontology/properties.owl#MainCropVeryHighYieldChippingPotato -->
+
+    <owl:Class rdf:about="http://owl.cs.manchester.ac.uk/ontology/properties.owl#MainCropVeryHighYieldChippingPotato">
+        <rdfs:label>Main crop very high yield chipping potato</rdfs:label>
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://owl.cs.manchester.ac.uk/ontology/properties.owl#ChippingPotato"/>
+                    <rdf:Description rdf:about="http://owl.cs.manchester.ac.uk/ontology/properties.owl#MainCropPotato"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://owl.cs.manchester.ac.uk/ontology/properties.owl#hasYield"/>
+                        <owl:someValuesFrom rdf:resource="http://owl.cs.manchester.ac.uk/ontology/yield.owl#VeryHighYield"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://owl.cs.manchester.ac.uk/ontology/properties.owl#Mashed -->
+
+    <owl:Class rdf:about="http://owl.cs.manchester.ac.uk/ontology/properties.owl#Mashed">
+        <rdfs:label>Mashed</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://owl.cs.manchester.ac.uk/ontology/properties.owl#ServingMethod"/>
+    </owl:Class>
+    
+
+
+    <!-- http://owl.cs.manchester.ac.uk/ontology/properties.owl#MashingPotato -->
+
+    <owl:Class rdf:about="http://owl.cs.manchester.ac.uk/ontology/properties.owl#MashingPotato">
+        <rdfs:label>Mashing potato</rdfs:label>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://owl.cs.manchester.ac.uk/ontology/properties.owl#hasPreferredServingMethod"/>
+                <owl:someValuesFrom rdf:resource="http://owl.cs.manchester.ac.uk/ontology/properties.owl#Mashed"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://owl.cs.manchester.ac.uk/ontology/properties.owl#Roasted -->
+
+    <owl:Class rdf:about="http://owl.cs.manchester.ac.uk/ontology/properties.owl#Roasted">
+        <rdfs:label>roasted</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://owl.cs.manchester.ac.uk/ontology/properties.owl#ServingMethod"/>
+    </owl:Class>
+    
+
+
+    <!-- http://owl.cs.manchester.ac.uk/ontology/properties.owl#RoastingPotato -->
+
+    <owl:Class rdf:about="http://owl.cs.manchester.ac.uk/ontology/properties.owl#RoastingPotato">
+        <rdfs:label>roasting potato</rdfs:label>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://owl.cs.manchester.ac.uk/ontology/properties.owl#hasPreferredServingMethod"/>
+                <owl:someValuesFrom rdf:resource="http://owl.cs.manchester.ac.uk/ontology/properties.owl#Roasted"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://owl.cs.manchester.ac.uk/ontology/properties.owl#Salad -->
+
+    <owl:Class rdf:about="http://owl.cs.manchester.ac.uk/ontology/properties.owl#Salad">
+        <rdfs:label>Salad</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://owl.cs.manchester.ac.uk/ontology/properties.owl#ServingMethod"/>
+    </owl:Class>
+    
+
+
+    <!-- http://owl.cs.manchester.ac.uk/ontology/properties.owl#SaladPotato -->
+
+    <owl:Class rdf:about="http://owl.cs.manchester.ac.uk/ontology/properties.owl#SaladPotato">
+        <rdfs:label>Salad potato</rdfs:label>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://owl.cs.manchester.ac.uk/ontology/properties.owl#hasPreferredServingMethod"/>
+                <owl:someValuesFrom rdf:resource="http://owl.cs.manchester.ac.uk/ontology/properties.owl#Salad"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://owl.cs.manchester.ac.uk/ontology/properties.owl#SecondEarlyPotato -->
+
+    <owl:Class rdf:about="http://owl.cs.manchester.ac.uk/ontology/properties.owl#SecondEarlyPotato">
+        <rdfs:label>second early potato</rdfs:label>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://owl.cs.manchester.ac.uk/ontology/properties.owl#hasCroppingTime"/>
+                <owl:someValuesFrom rdf:resource="http://owl.cs.manchester.ac.uk/ontology/cropping-time.owl#SecondEarlyCropping"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://owl.cs.manchester.ac.uk/ontology/properties.owl#ServingMethod -->
+
+    <owl:Class rdf:about="http://owl.cs.manchester.ac.uk/ontology/properties.owl#ServingMethod">
+        <rdfs:label>Serving method</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://owl.cs.manchester.ac.uk/ontology/start-here.owl-merged#BoilingMashingPotato -->
+
+    <owl:Class rdf:about="http://owl.cs.manchester.ac.uk/ontology/start-here.owl-merged#BoilingMashingPotato">
+        <rdfs:label>Boiling and or mashing potato</rdfs:label>
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://owl.cs.manchester.ac.uk/ontology/properties.owl#BoilingPotato"/>
+                    <rdf:Description rdf:about="http://owl.cs.manchester.ac.uk/ontology/properties.owl#MashingPotato"/>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://owl.cs.manchester.ac.uk/ontology/yield.owl#HighYield -->
+
+    <owl:Class rdf:about="http://owl.cs.manchester.ac.uk/ontology/yield.owl#HighYield">
+        <rdfs:label>High yield</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://owl.cs.manchester.ac.uk/ontology/yield.owl#Yield"/>
+    </owl:Class>
+    
+
+
+    <!-- http://owl.cs.manchester.ac.uk/ontology/yield.owl#LowYield -->
+
+    <owl:Class rdf:about="http://owl.cs.manchester.ac.uk/ontology/yield.owl#LowYield">
+        <rdfs:label>Low yield</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://owl.cs.manchester.ac.uk/ontology/yield.owl#Yield"/>
+    </owl:Class>
+    
+
+
+    <!-- http://owl.cs.manchester.ac.uk/ontology/yield.owl#MediumYield -->
+
+    <owl:Class rdf:about="http://owl.cs.manchester.ac.uk/ontology/yield.owl#MediumYield">
+        <rdfs:label>Medium yield</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://owl.cs.manchester.ac.uk/ontology/yield.owl#Yield"/>
+    </owl:Class>
+    
+
+
+    <!-- http://owl.cs.manchester.ac.uk/ontology/yield.owl#VeryHighYield -->
+
+    <owl:Class rdf:about="http://owl.cs.manchester.ac.uk/ontology/yield.owl#VeryHighYield">
+        <rdfs:label>Very high yield</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://owl.cs.manchester.ac.uk/ontology/yield.owl#Yield"/>
+    </owl:Class>
+    
+
+
+    <!-- http://owl.cs.manchester.ac.uk/ontology/yield.owl#Yield -->
+
+    <owl:Class rdf:about="http://owl.cs.manchester.ac.uk/ontology/yield.owl#Yield">
+        <rdfs:label>Potato yield</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://owl.cs.manchester.ac.uk/ontology/potato.owl#IrregularSize"/>
+            <rdf:Description rdf:about="http://owl.cs.manchester.ac.uk/ontology/potato.owl#LargeSize"/>
+            <rdf:Description rdf:about="http://owl.cs.manchester.ac.uk/ontology/potato.owl#MediumSize"/>
+            <rdf:Description rdf:about="http://owl.cs.manchester.ac.uk/ontology/potato.owl#SmallSize"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://owl.cs.manchester.ac.uk/ontology/properties.owl#Baked"/>
+            <rdf:Description rdf:about="http://owl.cs.manchester.ac.uk/ontology/properties.owl#Boiled"/>
+            <rdf:Description rdf:about="http://owl.cs.manchester.ac.uk/ontology/properties.owl#Chipped"/>
+            <rdf:Description rdf:about="http://owl.cs.manchester.ac.uk/ontology/properties.owl#Mashed"/>
+            <rdf:Description rdf:about="http://owl.cs.manchester.ac.uk/ontology/properties.owl#Roasted"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://owl.cs.manchester.ac.uk/ontology/cropping-time.owl#FirstEarlyCropping"/>
+            <rdf:Description rdf:about="http://owl.cs.manchester.ac.uk/ontology/cropping-time.owl#LateFirstEarlyCropping"/>
+            <rdf:Description rdf:about="http://owl.cs.manchester.ac.uk/ontology/cropping-time.owl#SecondEarlyCropping"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://owl.cs.manchester.ac.uk/ontology/potato.owl#Creamy"/>
+            <rdf:Description rdf:about="http://owl.cs.manchester.ac.uk/ontology/potato.owl#Firm"/>
+            <rdf:Description rdf:about="http://owl.cs.manchester.ac.uk/ontology/potato.owl#Waxy"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://owl.cs.manchester.ac.uk/ontology/potato.owl#Accent"/>
+            <rdf:Description rdf:about="http://owl.cs.manchester.ac.uk/ontology/potato.owl#Desiree"/>
+            <rdf:Description rdf:about="http://owl.cs.manchester.ac.uk/ontology/potato.owl#GoldenWonder"/>
+            <rdf:Description rdf:about="http://owl.cs.manchester.ac.uk/ontology/potato.owl#InternationalKidney"/>
+            <rdf:Description rdf:about="http://owl.cs.manchester.ac.uk/ontology/potato.owl#Juliette"/>
+            <rdf:Description rdf:about="http://owl.cs.manchester.ac.uk/ontology/potato.owl#MarisPiper"/>
+            <rdf:Description rdf:about="http://owl.cs.manchester.ac.uk/ontology/potato.owl#Markies"/>
+            <rdf:Description rdf:about="http://owl.cs.manchester.ac.uk/ontology/potato.owl#PentlandDell"/>
+            <rdf:Description rdf:about="http://owl.cs.manchester.ac.uk/ontology/potato.owl#PinkFirApple"/>
+            <rdf:Description rdf:about="http://owl.cs.manchester.ac.uk/ontology/potato.owl#Romano"/>
+            <rdf:Description rdf:about="http://owl.cs.manchester.ac.uk/ontology/potato.owl#Rudolf"/>
+            <rdf:Description rdf:about="http://owl.cs.manchester.ac.uk/ontology/potato.owl#Stemstar"/>
+            <rdf:Description rdf:about="http://owl.cs.manchester.ac.uk/ontology/potato.owl#Wilja"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://owl.cs.manchester.ac.uk/ontology/yield.owl#HighYield"/>
+            <rdf:Description rdf:about="http://owl.cs.manchester.ac.uk/ontology/yield.owl#LowYield"/>
+            <rdf:Description rdf:about="http://owl.cs.manchester.ac.uk/ontology/yield.owl#MediumYield"/>
+            <rdf:Description rdf:about="http://owl.cs.manchester.ac.uk/ontology/yield.owl#VeryHighYield"/>
+        </owl:members>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.2.3.1787) http://owlapi.sourceforge.net -->
+
